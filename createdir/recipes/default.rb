@@ -1,4 +1,4 @@
-[ "/srv/www/#{node['createdir']['shared_dir']}", "/srv/www/#{node['createdir']['config_dir']}" ].each do |path|
+[ "#{node['createdir']['shared_dir']}", "#{node['createdir']['config_dir']}" ].each do |path|
   directory path do
     mode node['createdir']['mode']
     owner node['createdir']['owner']
